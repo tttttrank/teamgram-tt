@@ -40,7 +40,7 @@ updateChangelog();
 async function updateTelegraph(dom) {
   const api = new Telegraph();
   const content = domToNode(dom.window.document.body).children;
-  const result = await api.editPage(AUTH_TOKEN, 'WebA-Beta-03-20', 'Telegram Web A Beta Changelog', content, {
+  const result = await api.editPage(AUTH_TOKEN, 'WebA-Beta-03-20', 'BlueFox Beta Changelog', content, {
     author_name: 'Web A team',
     author_url: 'https://teamgram.me/webachannel',
   });
