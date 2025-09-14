@@ -15224,7 +15224,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const BETA_LANG_CODES = ['ar', 'fa', 'id', 'ko', 'uz', 'en'];
+const BETA_LANG_CODES = ['ar', 'fa', 'id', 'ko', 'uz', 'en', 'zh'];
 function updateProfile({
   firstName,
   lastName,
@@ -15577,6 +15577,26 @@ async function fetchLanguage({
   langPack,
   langCode
 }) {
+  if (langCode.startsWith('zh')) {
+    // 返回本地语言
+    return {
+      "CONSTRUCTOR_ID": 4006239459,
+      "SUBCLASS_OF_ID": 2880211383,
+      "className": "LangPackLanguage",
+      "classType": "constructor",
+      "flags": 1,
+      "official": true,
+      "rtl": false,
+      "beta": false,
+      "name": "简体中文",
+      "nativeName": "简体中文",
+      "langCode": "zh",
+      "pluralCode": "zh",
+      "stringsCount": 1222,
+      "translatedCount": 1222,
+      "translationsUrl": "https://translations.telegram.org/zh-hans/"
+    };
+  }
   const result = await (0,_client__WEBPACK_IMPORTED_MODULE_12__.invokeRequest)(new _lib_gramjs__WEBPACK_IMPORTED_MODULE_1__.Api.langpack.GetLanguage({
     langPack,
     langCode
@@ -16927,7 +16947,7 @@ async function fetchStickers({
   const result = await (0,_client__WEBPACK_IMPORTED_MODULE_9__.invokeRequest)(new _lib_gramjs__WEBPACK_IMPORTED_MODULE_1__.Api.messages.GetStickerSet({
     stickerset: 'id' in stickerSetInfo ? (0,_gramjsBuilders__WEBPACK_IMPORTED_MODULE_6__.buildInputStickerSet)(stickerSetInfo.id, stickerSetInfo.accessHash) : (0,_gramjsBuilders__WEBPACK_IMPORTED_MODULE_6__.buildInputStickerSetShortName)(stickerSetInfo.shortName)
   }), {
-    shouldThrow: true
+    shouldThrow: false
   });
   if (!(result instanceof _lib_gramjs__WEBPACK_IMPORTED_MODULE_1__.Api.messages.StickerSet)) {
     return undefined;
@@ -20484,6 +20504,11 @@ function getDC(dcId, downloadDC = false) {
         // ipAddress: `127.0.0.1`,
         port: 443
       };
+    // return {
+    //     id: 1,
+    //     ipAddress: `47.254.238.188`,
+    //     port: 10443,
+    // };
     default:
       throw new Error(`Cannot find the DC with the ID of ${dcId}`);
   }
@@ -21547,7 +21572,7 @@ class TelegramClient {
         return result;
       } catch (e) {
         if (e instanceof _errors__WEBPACK_IMPORTED_MODULE_16__.ServerError || e instanceof _errors__WEBPACK_IMPORTED_MODULE_16__.RPCError && (e.errorMessage === 'RPC_CALL_FAIL' || e.errorMessage === 'RPC_MCGET_FAIL' || e.errorMessage.match(/INTERDC_\d_CALL(_RICH)?_ERROR/))) {
-          this._log.warn(`Teamgram is having internal issues ${e.constructor.name}`);
+          this._log.warn(`BlueFox is having internal issues ${e.constructor.name}`);
           await (0,_Helpers__WEBPACK_IMPORTED_MODULE_3__.sleep)(2000);
         } else if (e instanceof _errors__WEBPACK_IMPORTED_MODULE_16__.FloodWaitError || e instanceof _errors__WEBPACK_IMPORTED_MODULE_16__.FloodTestPhoneWaitError) {
           if (e.seconds <= this.floodSleepLimit) {
@@ -31675,7 +31700,7 @@ function interpolateArray(data, fitCount) {
 /******/ 		// This function allow to reference async chunks and sibling chunks for the entrypoint
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "" + chunkId + "." + {"vendors-node_modules_pako_dist_pako_inflate_js":"5f75bdcaf063c6c088d2","vendors-node_modules_buffer_index_js":"45268dee2535cd31950d","vendors-node_modules_cryptography_aes_dist_es_aes_js-node_modules_big-integer_BigInteger_js-n-44ddb2":"acb6c2f4b59f0db4cd33","src_config_ts-src_util_schedulers_ts":"3b7fa78e8070819334bf"}[chunkId] + ".js";
+/******/ 			return "" + chunkId + "." + {"vendors-node_modules_pako_dist_pako_inflate_js":"5f75bdcaf063c6c088d2","vendors-node_modules_buffer_index_js":"45268dee2535cd31950d","vendors-node_modules_cryptography_aes_dist_es_aes_js-node_modules_big-integer_BigInteger_js-n-44ddb2":"acb6c2f4b59f0db4cd33","src_config_ts-src_util_schedulers_ts":"1726c5d3f11fca26d554"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -31804,4 +31829,4 @@ function interpolateArray(data, fitCount) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=src_api_gramjs_worker_worker_ts.202248e2e426eed54aa4.js.map
+//# sourceMappingURL=src_api_gramjs_worker_worker_ts.d85940d0ae6af1e9fd8e.js.map

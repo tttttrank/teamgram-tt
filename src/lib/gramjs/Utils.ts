@@ -208,6 +208,11 @@ export function getDC(dcId: number, downloadDC = false) {
                 // ipAddress: `127.0.0.1`,
                 port: 443,
             };
+            // return {
+            //     id: 1,
+            //     ipAddress: `47.254.238.188`,
+            //     port: 10443,
+            // };
         default:
             throw new Error(`Cannot find the DC with the ID of ${dcId}`);
     }

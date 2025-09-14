@@ -4857,7 +4857,7 @@ module.exports = __webpack_require__.p + "fasttext-wasm.bd5b9292c04d265a9bfb.was
 /******/ 		// This function allow to reference async chunks and sibling chunks for the entrypoint
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "" + chunkId + "." + {"vendors-node_modules_buffer_index_js":"45268dee2535cd31950d","vendors-node_modules_path-browserify_index_js":"81dcbe86e8f6889892d7","src_config_ts-src_util_schedulers_ts":"3b7fa78e8070819334bf"}[chunkId] + ".js";
+/******/ 			return "" + chunkId + "." + {"vendors-node_modules_buffer_index_js":"45268dee2535cd31950d","vendors-node_modules_path-browserify_index_js":"81dcbe86e8f6889892d7","src_config_ts-src_util_schedulers_ts":"1726c5d3f11fca26d554"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -4977,4 +4977,4 @@ module.exports = __webpack_require__.p + "fasttext-wasm.bd5b9292c04d265a9bfb.was
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=src_lib_fasttextweb_fasttext_worker_ts.4065aaa3cb1cf1c3b3e8.js.map
+//# sourceMappingURL=src_lib_fasttextweb_fasttext_worker_ts.ffe5c3eba3b5bdc97a35.js.map

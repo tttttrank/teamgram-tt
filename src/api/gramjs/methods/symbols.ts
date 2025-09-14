@@ -160,7 +160,7 @@ export async function fetchStickers(
       ? buildInputStickerSet(stickerSetInfo.id, stickerSetInfo.accessHash)
       : buildInputStickerSetShortName(stickerSetInfo.shortName),
   }), {
-    shouldThrow: true,
+    shouldThrow: false,
   });
 
   if (!(result instanceof GramJs.messages.StickerSet)) {

@@ -5,13 +5,16 @@ import type {
   GiftProfileFilterOptions,
 } from './types';
 
-export const APP_CODE_NAME = 'A';
-export const APP_NAME = process.env.APP_NAME || `Teamgram Web ${APP_CODE_NAME}`;
+export const APP_CODE_NAME = '';
+export const APP_NAME = process.env.APP_NAME || `BlueFox ${APP_CODE_NAME}`;
 export const RELEASE_DATETIME = process.env.RELEASE_DATETIME;
 
-export const PRODUCTION_HOSTNAME = 'web.teamgram.net';
-export const PRODUCTION_URL = 'https://web.teamgram.net/a';
-export const WEB_VERSION_BASE = 'https://web.teamgram.net/'; // Used to redirect to other versions
+// export const PRODUCTION_HOSTNAME = 'web.teamgram.net';
+// export const PRODUCTION_URL = 'https://web.teamgram.net/a';
+// export const WEB_VERSION_BASE = 'https://web.teamgram.net/'; // Used to redirect to other versions
+export const PRODUCTION_HOSTNAME = '47.254.238.188:10443';
+export const PRODUCTION_URL = 'http://47.254.238.188:10443';
+export const WEB_VERSION_BASE = 'http://47.254.238.188:10443';
 export const BASE_URL = process.env.BASE_URL;
 
 export const IS_MOCKED_CLIENT = process.env.APP_MOCKED_CLIENT === '1';
@@ -273,7 +276,7 @@ export const CONTENT_TYPES_WITH_PREVIEW = new Set([
   ...SUPPORTED_VIDEO_CONTENT_TYPES,
 ]);
 
-export const CONTENT_NOT_SUPPORTED = 'The message is not supported on this version of Teamgram.';
+export const CONTENT_NOT_SUPPORTED = 'The message is not supported on this version of BlueFox.';
 
 // Taken from https://github.com/telegramdesktop/tdesktop/blob/41d9a9fcbd0c809c60ddbd9350791b1436aff7d9/Telegram/SourceFiles/ui/boxes/choose_language_box.cpp#L28
 export const SUPPORTED_TRANSLATION_LANGUAGES = [
@@ -335,7 +338,7 @@ export const DELETED_COMMENTS_CHANNEL_ID = '-1000000000777';
 export const MAX_MEDIA_FILES_FOR_ALBUM = 10;
 export const MAX_ACTIVE_PINNED_CHATS = 5;
 export const SCHEDULED_WHEN_ONLINE = 0x7FFFFFFE;
-export const LANG_PACKS = ['android', 'ios', 'tdesktop', 'macos'] as const;
+export const LANG_PACKS = ['android', 'ios', 'tdesktop', 'macos', 'web'] as const;
 export const FEEDBACK_URL = 'https://teamgram.net/bugs/?tag_ids=41&sort=time';
 export const FAQ_URL = 'https://teamgram.net/faq';
 export const PRIVACY_URL = 'https://teamgram.net/privacy';

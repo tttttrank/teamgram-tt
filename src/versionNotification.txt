@@ -1,4 +1,4 @@
-**Telegram Web A Digest**
+**BlueFox A Digest**
 
 Many new features and useful optimizations have been added in recent months. Here is a brief overview of what's been happening in Web A since August.
 

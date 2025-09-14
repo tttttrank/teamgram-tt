@@ -264,13 +264,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   WEB_APP_PLATFORM: () => (/* binding */ WEB_APP_PLATFORM),
 /* harmony export */   WEB_VERSION_BASE: () => (/* binding */ WEB_VERSION_BASE)
 /* harmony export */ });
-const APP_CODE_NAME = 'A';
-const APP_NAME =  false || `Teamgram Web ${APP_CODE_NAME}`;
-const RELEASE_DATETIME = 1757639379440;
-const PRODUCTION_HOSTNAME = 'web.teamgram.net';
-const PRODUCTION_URL = 'https://web.teamgram.net/a';
-const WEB_VERSION_BASE = 'https://web.teamgram.net/'; // Used to redirect to other versions
-const BASE_URL = "https://web.teamgram.net/a/";
+const APP_CODE_NAME = '';
+const APP_NAME =  false || `BlueFox ${APP_CODE_NAME}`;
+const RELEASE_DATETIME = 1757765156716;
+
+// export const PRODUCTION_HOSTNAME = 'web.teamgram.net';
+// export const PRODUCTION_URL = 'https://web.teamgram.net/a';
+// export const WEB_VERSION_BASE = 'https://web.teamgram.net/'; // Used to redirect to other versions
+const PRODUCTION_HOSTNAME = '47.254.238.188:10443';
+const PRODUCTION_URL = 'http://47.254.238.188:10443';
+const WEB_VERSION_BASE = 'http://47.254.238.188:10443';
+const BASE_URL = "http://47.254.238.188:10443";
 const IS_MOCKED_CLIENT = "" === '1';
 const IS_TEST = "production" === 'test';
 const IS_PERF = "production" === 'perf';
@@ -285,7 +289,7 @@ const BETA_CHANGELOG_URL = 'https://telegra.ph/WebA-Beta-03-20';
 const ELECTRON_HOST_URL = "https://teamgram-a-host";
 const DEBUG_ALERT_MSG = 'Shoot!\nSomething went wrong, please see the error details in Dev Tools Console.';
 const DEBUG_GRAMJS = false;
-const PAGE_TITLE = "Teamgram{APP_ENV !== 'production' ? ' Beta' : ''}";
+const PAGE_TITLE = "BlueFox";
 const INACTIVE_MARKER = '[Inactive]';
 const DEBUG_PAYMENT_SMART_GLOCAL = false;
 const SESSION_USER_KEY = 'user_auth';
@@ -465,7 +469,7 @@ const SUPPORTED_PHOTO_CONTENT_TYPES = new Set(['image/png', 'image/jpeg', GIF_MI
 const SUPPORTED_VIDEO_CONTENT_TYPES = new Set(['video/mp4', 'video/quicktime']);
 const SUPPORTED_AUDIO_CONTENT_TYPES = new Set(['audio/mp3', 'audio/ogg', 'audio/wav', 'audio/mpeg', 'audio/flac', 'audio/aac', 'audio/m4a', 'audio/mp4', 'audio/x-m4a']);
 const CONTENT_TYPES_WITH_PREVIEW = new Set([...SUPPORTED_PHOTO_CONTENT_TYPES, ...SUPPORTED_VIDEO_CONTENT_TYPES]);
-const CONTENT_NOT_SUPPORTED = 'The message is not supported on this version of Teamgram.';
+const CONTENT_NOT_SUPPORTED = 'The message is not supported on this version of BlueFox.';
 
 // Taken from https://github.com/telegramdesktop/tdesktop/blob/41d9a9fcbd0c809c60ddbd9350791b1436aff7d9/Telegram/SourceFiles/ui/boxes/choose_language_box.cpp#L28
 const SUPPORTED_TRANSLATION_LANGUAGES = [
@@ -513,7 +517,7 @@ const DELETED_COMMENTS_CHANNEL_ID = '-1000000000777';
 const MAX_MEDIA_FILES_FOR_ALBUM = 10;
 const MAX_ACTIVE_PINNED_CHATS = 5;
 const SCHEDULED_WHEN_ONLINE = 0x7FFFFFFE;
-const LANG_PACKS = ['android', 'ios', 'tdesktop', 'macos'];
+const LANG_PACKS = ['android', 'ios', 'tdesktop', 'macos', 'web'];
 const FEEDBACK_URL = 'https://teamgram.net/bugs/?tag_ids=41&sort=time';
 const FAQ_URL = 'https://teamgram.net/faq';
 const PRIVACY_URL = 'https://teamgram.net/privacy';
@@ -782,4 +786,4 @@ function onBeforeUnload(callback, isLast = false) {
 /***/ })
 
 }]);
-//# sourceMappingURL=src_config_ts-src_util_schedulers_ts.3b7fa78e8070819334bf.js.map
+//# sourceMappingURL=src_config_ts-src_util_schedulers_ts.1726c5d3f11fca26d554.js.map

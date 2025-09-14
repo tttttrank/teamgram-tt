@@ -1,19 +1,8 @@
-"use strict";
-(self["webpackChunktelegram_t"] = self["webpackChunktelegram_t"] || []).push([["src_util_fallbackLangPack_ts"],{
-
-/***/ "./src/util/fallbackLangPack.ts":
-/*!**************************************!*\
-  !*** ./src/util/fallbackLangPack.ts ***!
-  \**************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* eslint-disable max-len */
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+import type { ApiOldLangPack } from '../api/types';
+
+export default {
   Search: 'Search',
   SavedMessages: 'Saved Messages',
   ArchivedChats: 'Archived Chats',
@@ -87,12 +76,12 @@ __webpack_require__.r(__webpack_exports__);
   SharedVoiceTab2: 'Voice',
   'PreviewSender.SendPhoto': {
     oneValue: 'Send Photo',
-    otherValue: 'Send %d Photos'
+    otherValue: 'Send %d Photos',
   },
   Send: 'Send',
   'Preview.Dragging.AddItems': {
     oneValue: 'Add Item',
-    otherValue: 'Add Items'
+    otherValue: 'Add Items',
   },
   Caption: 'Caption',
   formatterMonthYear: 'MMMM yyyy',
@@ -105,7 +94,7 @@ __webpack_require__.r(__webpack_exports__);
   'Weekday.ShortTuesday': 'Tue',
   'LastSeen.MinutesAgo': {
     oneValue: 'last seen 1 minute ago',
-    otherValue: 'last seen %@ minutes ago'
+    otherValue: 'last seen %@ minutes ago',
   },
   'AttachmentMenu.PhotoOrVideo': 'Photo or Video',
   AttachDocument: 'File',
@@ -114,7 +103,7 @@ __webpack_require__.r(__webpack_exports__);
   'Chat.PanelUnpinAllMessages': 'Unpin All Messages',
   'Chat.UnpinAllMessagesConfirmation': {
     oneValue: 'Do you want to unpin %d message in this chat?',
-    otherValue: 'Do you want to unpin all %d messages in this chat?'
+    otherValue: 'Do you want to unpin all %d messages in this chat?',
   },
   DialogUnpin: 'Unpin',
   Cancel: 'Cancel',
@@ -126,7 +115,7 @@ __webpack_require__.r(__webpack_exports__);
   'ChatList.DeleteForCurrentUser': 'Delete just for me',
   'LastSeen.HoursAgo': {
     oneValue: 'last seen 1 hour ago',
-    otherValue: 'last seen %@ hours ago'
+    otherValue: 'last seen %@ hours ago',
   },
   ForwardedMessage: 'Forwarded message',
   'Weekday.Yesterday': 'Yesterday',
@@ -168,7 +157,7 @@ __webpack_require__.r(__webpack_exports__);
   CropImage: 'Crop image',
   Chats: {
     oneValue: '%1$d chat',
-    otherValue: '%1$d chats'
+    otherValue: '%1$d chats',
   },
   FilterContacts: 'Contacts',
   CreateNewFilterInfo: 'Create folders for different groups of chats and quickly switch between them.',
@@ -204,7 +193,7 @@ __webpack_require__.r(__webpack_exports__);
   FilterEdit: 'Edit folder',
   Members: {
     oneValue: '%1$d member',
-    otherValue: '%1$d members'
+    otherValue: '%1$d members',
   },
   General: 'General',
   lng_settings_send_enter: 'Send with Enter',
@@ -223,7 +212,7 @@ __webpack_require__.r(__webpack_exports__);
   LoopAnimatedStickers: 'Loop Animated Stickers',
   'StickerPack.StickerCount': {
     oneValue: '1 sticker',
-    otherValue: '%@ stickers'
+    otherValue: '%@ stickers',
   },
   UploadImage: 'Upload image',
   SetColor: 'Set a color',
@@ -255,7 +244,7 @@ __webpack_require__.r(__webpack_exports__);
   P2PNobody: 'Nobody',
   Users: {
     oneValue: '%1$d user',
-    otherValue: '%1$d users'
+    otherValue: '%1$d users',
   },
   PasswordOn: 'On',
   BlockedUsersInfo: 'Blocked users will not be able to contact you and will not see your Last Seen time.',
@@ -286,7 +275,7 @@ __webpack_require__.r(__webpack_exports__);
   'DialogList.SearchSectionGlobal': 'Global Search',
   Subscribers: {
     oneValue: '%1$d subscriber',
-    otherValue: '%1$d subscribers'
+    otherValue: '%1$d subscribers',
   },
   ChannelLeaveAlertWithName: 'Are you sure you want to leave **%1$s**?',
   'ChatList.Search.ShowLess': 'Show less',
@@ -309,7 +298,7 @@ __webpack_require__.r(__webpack_exports__);
   ReportSelectMessages: 'Select messages',
   'VoiceOver.Chat.MessagesSelected': {
     oneValue: '%@ message selected',
-    otherValue: '%@ messages selected'
+    otherValue: '%@ messages selected',
   },
   'Conversation.DeleteManyMessages': 'Delete Messages',
   AreYouSureDeleteFewMessages: 'Are you sure you want to delete these messages?',
@@ -338,7 +327,7 @@ __webpack_require__.r(__webpack_exports__);
   lng_search_no_results: 'No messages found',
   'StickerPack.RemoveStickerCount': {
     oneValue: 'Remove 1 Sticker',
-    otherValue: 'Remove %@ Stickers'
+    otherValue: 'Remove %@ Stickers',
   },
   AccActionDownload: 'Download',
   AccActionPlay: 'Play',
@@ -350,7 +339,7 @@ __webpack_require__.r(__webpack_exports__);
   lng_context_forward_msg: 'Forward Message',
   Comments: {
     oneValue: '%1$d Comment',
-    otherValue: '%1$d Comments'
+    otherValue: '%1$d Comments',
   },
   ChannelSubscribers: 'Subscribers',
   LeaveAComment: 'Leave a comment',
@@ -410,7 +399,7 @@ __webpack_require__.r(__webpack_exports__);
   PinnedMessage: 'Pinned Message',
   OnlineCount: {
     oneValue: '%1$d online',
-    otherValue: '%1$d online'
+    otherValue: '%1$d online',
   },
   GroupName: 'Group name',
   GroupType: 'Group Type',
@@ -460,17 +449,17 @@ __webpack_require__.r(__webpack_exports__);
   SearchStickersHint: 'Search sticker sets',
   Stickers: {
     oneValue: '%1$d sticker',
-    otherValue: '%1$d stickers'
+    otherValue: '%1$d stickers',
   },
   'Stickers.Install': 'ADD',
   'StickerPack.AddStickerCount': {
     oneValue: 'Add 1 Sticker',
-    otherValue: 'Add %@ Stickers'
+    otherValue: 'Add %@ Stickers',
   },
   SearchGifsTitle: 'Search GIFs',
   'PreviewSender.SendFile': {
     oneValue: 'Send File',
-    otherValue: 'Send %d Files'
+    otherValue: 'Send %d Files',
   },
   Phone: 'Phone',
   Reminders: 'Reminders',
@@ -487,15 +476,15 @@ __webpack_require__.r(__webpack_exports__);
   NoMessages: 'No messages here yet...',
   PinnedMessagesCount: {
     oneValue: 'Pinned Message',
-    otherValue: '%1$d Pinned Messages'
+    otherValue: '%1$d Pinned Messages',
   },
   'Chat.Pinned.UnpinAll': {
     oneValue: 'Unpin %d Message',
-    otherValue: 'Unpin All %d Messages'
+    otherValue: 'Unpin All %d Messages',
   },
   CommentsCount: {
     oneValue: '%1$d comment',
-    otherValue: '%1$d comments'
+    otherValue: '%1$d comments',
   },
   'Conversation.DefaultRestrictedMedia': 'Posting media content isn\'t allowed in this group.',
   DiscussionStarted: 'Discussion started',
@@ -523,10 +512,5 @@ __webpack_require__.r(__webpack_exports__);
   OpenMapWith: 'Open map with...',
   FullDateTimeFormat: '%@, %@',
   ProfileOpenAppTerms: 'Terms of Service for Mini Apps',
-  ProfileBotOpenAppInfoLink: 'https://teamgram.net/tos/mini-apps'
-});
-
-/***/ })
-
-}]);
-//# sourceMappingURL=src_util_fallbackLangPack_ts.55824ba1217b61ef1064.js.map
+  ProfileBotOpenAppInfoLink: 'https://teamgram.net/tos/mini-apps',
+} as ApiOldLangPack;

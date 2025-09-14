@@ -76,15 +76,30 @@ const SettingsLanguage: FC<OwnProps & StateProps> = ({
 
   const options = useMemo(() => {
     if (!languages) return undefined;
-    const currentLangCode = (window.navigator.language || 'en').toLowerCase();
+    const currentLangCode = (window.navigator.language || 'zh').toLowerCase();
     const shortLangCode = currentLangCode.substr(0, 2);
 
-    return languages.map(({ langCode, nativeName, name }) => ({
+    const mapped = languages.map(({ langCode, nativeName, name }) => ({
       value: langCode,
-      label: nativeName,
-      subLabel: name,
+      // 强制转为 string，避免 nativeName/name 被推断为 TeactNode/number
+      label: String(nativeName),
+      subLabel: String(name),
       isLoading: langCode === selectedLanguage && isLoading,
-    } satisfies ItemPickerOption)).sort((a) => {
+    } as ItemPickerOption));
+
+    // 如果 languages 中没有明确的中文项，添加一个快速切换的中文选项（'zh'）
+    const chineseCodes = ['zh', 'zh-cn', 'zh-hans', 'zh-hant', 'zh-tw'];
+    const hasChinese = mapped.some((o) => chineseCodes.includes(o.value.toLowerCase()));
+    if (!hasChinese) {
+      mapped.unshift({
+        value: 'zh',
+        label: '中文',
+        subLabel: 'Chinese',
+        isLoading: selectedLanguage === 'zh' && isLoading,
+      } as ItemPickerOption);
+    }
+
+    return mapped.sort((a) => {
       return currentLangCode && (a.value === currentLangCode || a.value === shortLangCode) ? -1 : 0;
     });
   }, [isLoading, languages, selectedLanguage]);

@@ -4,9 +4,9 @@ import type {
 
 import readStrings from './readStrings';
 
-const FALLBACK_LANG_CODE = 'en';
+const FALLBACK_LANG_CODE = 'zh';
 const FALLBACK_VERSION = 0;
-const FALLBACK_TRANSLATE_URL = 'https://teamgram.net/translations/en/weba';
+const FALLBACK_TRANSLATE_URL = 'https://translations.telegram.org/zh-hans/';
 
 export default async function readFallbackStrings(forLocalScript?: boolean): Promise<CachedLangData> {
   let fileData;
@@ -43,8 +43,8 @@ export default async function readFallbackStrings(forLocalScript?: boolean): Pro
 
   const language: ApiLanguage = {
     langCode: FALLBACK_LANG_CODE,
-    name: 'English',
-    nativeName: 'English',
+    name: 'Chinese',
+    nativeName: '中文',
     pluralCode: FALLBACK_LANG_CODE,
     stringsCount,
     translatedCount: stringsCount,

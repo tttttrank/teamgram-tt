@@ -1,9 +1,9 @@
-productName: Teamgram A
+productName: BlueFox
 artifactName: ${productName}-${arch}.${ext}
 appId: net.teamgram.TeamgramA
 extraMetadata:
   main: ./dist/electron.js
-  productName: Teamgram A
+  productName: BlueFox
 files:
   - "dist"
   - "package.json"
@@ -47,7 +47,7 @@ mac:
   notarize:
     teamId: Y54Z4K69Z9
 dmg:
-  title: Teamgram A installer
+  title: BlueFox installer
   background: public/background-electron-dmg.tiff
   iconSize: 100
   contents:

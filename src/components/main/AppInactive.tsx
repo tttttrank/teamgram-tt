@@ -26,7 +26,7 @@ const AppInactive: FC = () => {
         <img src={appInactivePath} alt="" />
         <h3 className="title">Such error, many tabs</h3>
         <div className="description">
-          Telegram supports only one active tab with the app.
+          BlueFox supports only one active tab with the app.
           <br />
           Please reload this page to continue using this tab or close it.
         </div>

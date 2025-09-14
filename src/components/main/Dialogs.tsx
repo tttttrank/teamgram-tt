@@ -114,7 +114,7 @@ function getErrorHeader(error: ApiError) {
   }
 
   if (!error.hasErrorKey) {
-    return 'Teamgram';
+    return 'BlueFox';
   }
 
   return 'Something went wrong';

@@ -259,7 +259,7 @@ const ConfirmDialog = ({
   const handleKeyDown = (0,_hooks_useKeyboardListNavigation__WEBPACK_IMPORTED_MODULE_2__["default"])(containerRef, isOpen, handleSelectWithEnter, '.Button');
   return /*#__PURE__*/_lib_teact_teact__WEBPACK_IMPORTED_MODULE_0__["default"].createElement(_Modal__WEBPACK_IMPORTED_MODULE_5__["default"], {
     className: (0,_util_buildClassName__WEBPACK_IMPORTED_MODULE_1__["default"])('confirm', className),
-    title: title || (!noDefaultTitle ? lang('Teamgram') : undefined),
+    title: title || (!noDefaultTitle ? lang('BlueFox') : undefined),
     header: header,
     isOpen: isOpen,
     onClose: onClose,
@@ -3300,4 +3300,4 @@ __webpack_require__.r(__webpack_exports__);
 /***/ })
 
 }]);
-//# sourceMappingURL=shared-components.e95f9ce77b4dbd68c3ac.js.map
+//# sourceMappingURL=shared-components.9216b28297400e107a85.js.map

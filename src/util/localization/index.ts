@@ -42,7 +42,7 @@ import LimitedMap from '../primitives/LimitedMap';
 import initialStrings from '../../assets/localization/initialStrings';
 
 const LANGPACK_STORE_PREFIX = 'langpack-';
-const FORMATTERS_FALLBACK_LANG = 'en';
+const FORMATTERS_FALLBACK_LANG = 'zh';
 
 const STRING_CACHE_LIMIT = 400;
 const TRANSLATION_CACHE = new LimitedMap<string, string>(STRING_CACHE_LIMIT);
@@ -118,6 +118,7 @@ async function fetchDifference() {
     langCode: langPack.langCode,
     fromVersion: langPack.version,
   });
+  
   if (!result) return;
 
   applyLangPackDifference(result.version, result.strings, result.keysToRemove);
@@ -283,13 +284,17 @@ export async function changeLanguage(newLanguage: ApiLanguage) {
       return;
     }
 
+    console.warn('remoteLangPack', remoteLangPack,{
+      langPack: LANG_PACK,
+      langCode: newLanguage.langCode,
+    });
+
     updateLangPack({
       langCode: newLanguage.langCode,
       version: remoteLangPack.version,
       strings: remoteLangPack.strings,
     });
-    updateLanguage(newLanguage);
-
+    updateLanguage(newLanguage);    
     cacheLangData({
       langPack: langPack!,
       language: newLanguage,

@@ -465,6 +465,28 @@ export async function fetchLanguage({
   langPack: string;
   langCode: string;
 }): Promise<ApiLanguage | undefined> {
+
+  // if (langCode.startsWith('zh')) {
+  //   // 返回本地语言
+  //   return {
+  //     "CONSTRUCTOR_ID": 4006239459,
+  //     "SUBCLASS_OF_ID": 2880211383,
+  //     "className": "LangPackLanguage",
+  //     "classType": "constructor",
+  //     "flags": 1,
+  //     "official": true,
+  //     "rtl": false,
+  //     "beta": false,
+  //     "name": "简体中文",
+  //     "nativeName": "简体中文",
+  //     "langCode": "zh",
+  //     "pluralCode": "zh",
+  //     "stringsCount": 1222,
+  //     "translatedCount": 1222,
+  //     "translationsUrl": "https://translations.telegram.org/zh-hans/"
+  //   }
+  // }
+
   const result = await invokeRequest(new GramJs.langpack.GetLanguage({
     langPack,
     langCode,
@@ -634,7 +656,7 @@ export async function fetchTimezones(hash?: number) {
   };
 }
 
-export async function fetchCountryList({ langCode = 'en' }: { langCode?: string }) {
+export async function fetchCountryList({ langCode = 'zh' }: { langCode?: string }) {
   const countryList = await invokeRequest(new GramJs.help.GetCountriesList({
     langCode,
   }));
