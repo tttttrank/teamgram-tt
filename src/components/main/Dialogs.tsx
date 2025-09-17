@@ -114,7 +114,7 @@ function getErrorHeader(error: ApiError) {
   }
 
   if (!error.hasErrorKey) {
-    return 'BlueFox';
+    return 'Tadpole';
   }
 
   return 'Something went wrong';

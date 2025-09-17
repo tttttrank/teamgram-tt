@@ -6,7 +6,7 @@ import type { LangKey } from '../../types/language';
 
 export default {
   "WrongNumber": "Wrong number?",
-  "SentAppCode": "We've sent the code to the **BlueFox** app on your other device.",
+  "SentAppCode": "We've sent the code to the **Tadpole** app on your other device.",
   "LoginJustSentSms": "We've sent you a code via SMS. Please enter it above.",
   "LoginHeaderPassword": "Enter Password",
   "LoginEnterPasswordDescription": "You have Two-Step Verification enabled, so your account is protected with an additional password.",
@@ -14,8 +14,8 @@ export default {
   "LoginPhonePlaceholder": "Your phone number",
   "LoginNext": "Next",
   "LoginQRLogin": "Log in by QR Code",
-  "LoginQRTitle": "Log in to BlueFox by QR Code",
-  "LoginQRHelp1": "Open BlueFox on your phone",
+  "LoginQRTitle": "Log in to Tadpole by QR Code",
+  "LoginQRHelp1": "Open Tadpole on your phone",
   "LoginQRHelp2": "Go to **Settings** > **Devices** > **Link Desktop Device**",
   "LoginQRHelp3": "Point your phone at this screen to confirm login",
   "LoginQRCancel": "Log in by phone Number",

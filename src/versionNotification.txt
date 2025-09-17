@@ -1,20 +1,20 @@
-**BlueFox A Digest**
+**Tadpole A Digest**
 
 Many new features and useful optimizations have been added in recent months. Here is a brief overview of what's been happening in Web A since August.
 
 **September – November** 
 
 ✏️ __General__
-• [Reply Revolution](https://telegram.org/blog/reply-revolution#reply-revolution) – the app learned to quote specific parts of any message, making your responses 100% precise.
-• Also, [Quote Formatting](https://telegram.org/blog/reply-revolution#quote-formatting) have arrived.
+• [Reply Revolution](https://org.tadpole.chat/blog/reply-revolution#reply-revolution) – the app learned to quote specific parts of any message, making your responses 100% precise.
+• Also, [Quote Formatting](https://org.tadpole.chat/blog/reply-revolution#quote-formatting) have arrived.
 
 📣 __Channels__
-• Channels added [boosts](https://telegram.org/blog/channel-stories#stories-for-channels) and [giveaways.](https://telegram.org/blog/giveaways#free-telegram-premium) 
+• Channels added [boosts](https://org.tadpole.chat/blog/channel-stories#stories-for-channels) and [giveaways.](https://org.tadpole.chat/blog/giveaways#free-telegram-premium) 
 • Users also got an option to reassign their boosts between channels.
 
 🌄 __Stories__
 • Numerous improvements have been made to the animations flow, ensuring the stories bar expands more smoothly. Additionally, a package of optimizations has been added to enhance the performance of stories on mobile devices.
-• Stories have been introduced for [channels,](https://telegram.org/blog/channel-stories#stories-for-channels) and the story viewer has been updated with new gestures to expand and reply.
+• Stories have been introduced for [channels,](https://org.tadpole.chat/blog/channel-stories#stories-for-channels) and the story viewer has been updated with new gestures to expand and reply.
 
 ⚙️ __Settings__
 • The app has added an option, 'Who can find me by phone number,' along with a setting under 'Privacy and Security' to manage the visibility of your bio.
@@ -27,27 +27,27 @@ Many new features and useful optimizations have been added in recent months. Her
 **December – February**
 
 ✏️ __General__
-• [Saved Messages 2.0](https://telegram.org/blog/new-saved-messages-and-9-more#saved-messages-2-0) – including tags, My Notes, Replies and forwards from hidden authors.
-• [One-Time Voice Messages](https://telegram.org/blog/new-saved-messages-and-9-more#one-time-voice-and-video-messages) including both listening and recording. Added support for viewing One-Time Video Messages.
-• [Read-Time in Private Chats](https://telegram.org/blog/new-saved-messages-and-9-more#read-time-in-private-chats)
+• [Saved Messages 2.0](https://org.tadpole.chat/blog/new-saved-messages-and-9-more#saved-messages-2-0) – including tags, My Notes, Replies and forwards from hidden authors.
+• [One-Time Voice Messages](https://org.tadpole.chat/blog/new-saved-messages-and-9-more#one-time-voice-and-video-messages) including both listening and recording. Added support for viewing One-Time Video Messages.
+• [Read-Time in Private Chats](https://org.tadpole.chat/blog/new-saved-messages-and-9-more#read-time-in-private-chats)
 • You can now replace media when editing messages.
-• The app learned to [preserve the selected mode](https://telegram.org/blog/similar-channels#improvements-for-topics) for topics in groups.
+• The app learned to [preserve the selected mode](https://org.tadpole.chat/blog/similar-channels#improvements-for-topics) for topics in groups.
 • Whenever you create a small group, Web A suggests a name for it based on users' name you have added.
 
 📣 __Channels__ 
-• Added [custom channel reactions.](https://telegram.org/blog/similar-channels#custom-reactions-for-channels)
-• Implemented [channel stories stats.](https://telegram.org/blog/similar-channels#story-stats-for-channels)
+• Added [custom channel reactions.](https://org.tadpole.chat/blog/similar-channels#custom-reactions-for-channels)
+• Implemented [channel stories stats.](https://org.tadpole.chat/blog/similar-channels#story-stats-for-channels)
 • Channel emoji statuses.
-• [Similar Channels.](https://telegram.org/blog/similar-channels#similar-channels)
+• [Similar Channels.](https://org.tadpole.chat/blog/similar-channels#similar-channels)
 
 👥 __Groups__
-• [9 new features for groups.](https://telegram.org/blog/february2024)
+• [9 new features for groups.](https://org.tadpole.chat/blog/february2024)
 
 🤖 __Bots__
 • Edit your bots info right from their profile.
 
 🌄 __Stories__
-• Added support for [forwarded stories](https://telegram.org/blog/posts-in-stories-and-more#view-reposts-and-more) and [channel posts in stories.](https://telegram.org/blog/posts-in-stories-and-more#share-posts-in-stories)
+• Added support for [forwarded stories](https://org.tadpole.chat/blog/posts-in-stories-and-more#view-reposts-and-more) and [channel posts in stories.](https://org.tadpole.chat/blog/posts-in-stories-and-more#share-posts-in-stories)
 
 ✨ __Extra__
 • Giveaway Improvements: displaying winners list and additional prizes.

@@ -62,7 +62,7 @@ const ConfirmDialog: FC<OwnProps> = ({
   return (
     <Modal
       className={buildClassName('confirm', className)}
-      title={(title || (!noDefaultTitle ? lang('BlueFox') : undefined))}
+      title={(title || (!noDefaultTitle ? lang('Tadpole') : undefined))}
       header={header}
       isOpen={isOpen}
       onClose={onClose}

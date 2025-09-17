@@ -40,8 +40,8 @@ const {
 
 const CSP = `
   default-src 'self';
-  connect-src 'self' ws://8.213.227.226:10443 wss://tadpole.chat ws://127.0.0.1:11443 wss://*.web.tadpole.chat blob: http: https: ${APP_ENV === 'development' ? 'wss:' : ''};
-  script-src 'self' 'wasm-unsafe-eval' http://8.213.227.226:10443 http://127.0.0.1:1234/ https://tadpole.chat https://tadpole.chat/_websync_;
+  connect-src 'self' wss://tadpole.chat ws://127.0.0.1:11443 wss://*.web.tadpole.chat blob: http: https: ${APP_ENV === 'development' ? 'wss:' : ''};
+  script-src 'self' 'wasm-unsafe-eval' http://127.0.0.1:1234/ https://tadpole.chat https://tadpole.chat/_websync_;
   style-src 'self' 'unsafe-inline';
   img-src 'self' data: blob: https://ss3.4sqi.net/img/categories_v2/
   ${IS_PACKAGED_ELECTRON ? `${BASE_URL}/` : ''};

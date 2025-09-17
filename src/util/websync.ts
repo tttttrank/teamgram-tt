@@ -8,7 +8,7 @@ import { hasStoredSession } from './sessions';
 import { IS_ELECTRON } from './windowEnvironment';
 
 const WEBSYNC_URLS = [
-  'teamgram.me',
+  'tadpole.chat',
 ].map((domain) => `https://${domain}/_websync_?`);
 const WEBSYNC_VERSION = `${APP_VERSION} ${APP_CODE_NAME}`;
 const WEBSYNC_KEY = 'tgme_sync';

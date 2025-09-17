@@ -6,7 +6,7 @@ import type { LangKey } from '../../types/language';
 
 export default {
   "WrongNumber": "号码错误？",
-  "SentAppCode": "我们已将验证码发送到你另一台设备上的 **BlueFox** 应用。",
+  "SentAppCode": "我们已将验证码发送到你另一台设备上的 **Tadpole** 应用。",
   "LoginJustSentSms": "我们已通过短信向你发送验证码，请在上方输入。",
   "LoginHeaderPassword": "输入密码",
   "LoginEnterPasswordDescription": "你已启用两步验证，因此你的账户受额外密码保护。",
@@ -14,8 +14,8 @@ export default {
   "LoginPhonePlaceholder": "你的手机号码",
   "LoginNext": "下一步",
   "LoginQRLogin": "通过二维码登录",
-  "LoginQRTitle": "使用二维码登录 BlueFox",
-  "LoginQRHelp1": "在你的手机上打开 BlueFox",
+  "LoginQRTitle": "使用二维码登录 Tadpole",
+  "LoginQRHelp1": "在你的手机上打开 Tadpole",
   "LoginQRHelp2": "前往 **设置** > **设备** > **关联桌面设备**",
   "LoginQRHelp3": "将手机对准此屏幕以确认登录",
   "LoginQRCancel": "通过手机号登录",

@@ -14,7 +14,7 @@ on:
     branches: master
 
 env:
-  APP_NAME: BlueFox
+  APP_NAME: Tadpole
 
 jobs:
   electron-release:

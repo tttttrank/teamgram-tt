@@ -272,7 +272,7 @@ export const INITIAL_GLOBAL_STATE: GlobalState = {
       shouldSuggestCustomEmoji: true,
       shouldSkipWebAppCloseConfirmation: false,
       shouldUpdateStickerSetOrder: true,
-      language: 'en',
+      language: 'zh',
       timeFormat: '24h',
       wasTimeFormatSetManually: false,
       isConnectionStatusMinimized: true,

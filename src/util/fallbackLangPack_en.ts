@@ -512,5 +512,5 @@ export default {
   OpenMapWith: 'Open map with...',
   FullDateTimeFormat: '%@, %@',
   ProfileOpenAppTerms: 'Terms of Service for Mini Apps',
-  ProfileBotOpenAppInfoLink: 'https://teamgram.net/tos/mini-apps',
+  ProfileBotOpenAppInfoLink: 'https://chat.tadpole.chat/tos/mini-apps',
 } as ApiOldLangPack;

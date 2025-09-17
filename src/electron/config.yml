@@ -1,9 +1,9 @@
-productName: BlueFox
+productName: Tadpole
 artifactName: ${productName}-${arch}.${ext}
-appId: net.teamgram.TeamgramA
+appId: net.tadpole.org
 extraMetadata:
   main: ./dist/electron.js
-  productName: BlueFox
+  productName: Tadpole
 files:
   - "dist"
   - "package.json"
@@ -47,7 +47,7 @@ mac:
   notarize:
     teamId: Y54Z4K69Z9
 dmg:
-  title: BlueFox installer
+  title: Tadpole installer
   background: public/background-electron-dmg.tiff
   iconSize: 100
   contents:

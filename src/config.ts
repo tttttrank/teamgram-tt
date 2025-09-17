@@ -6,15 +6,14 @@ import type {
 } from './types';
 
 export const APP_CODE_NAME = '';
-export const APP_NAME = process.env.APP_NAME || `BlueFox ${APP_CODE_NAME}`;
+export const APP_NAME = process.env.APP_NAME || `Tadpole ${APP_CODE_NAME}`;
 export const RELEASE_DATETIME = process.env.RELEASE_DATETIME;
 
-// export const PRODUCTION_HOSTNAME = 'web.teamgram.net';
-// export const PRODUCTION_URL = 'https://web.teamgram.net/a';
-// export const WEB_VERSION_BASE = 'https://web.teamgram.net/'; // Used to redirect to other versions
-export const PRODUCTION_HOSTNAME = '47.254.238.188:10443';
-export const PRODUCTION_URL = 'http://47.254.238.188:10443';
-export const WEB_VERSION_BASE = 'http://47.254.238.188:10443';
+export const AUTO_LOGIN_WITH_FINGERPRINT_DEFAULT = true;
+
+export const PRODUCTION_HOSTNAME = 'tadpole.chat';
+export const PRODUCTION_URL = 'https://tadpole.chat';
+export const WEB_VERSION_BASE = 'https://tadpole.chat';
 export const BASE_URL = process.env.BASE_URL;
 
 export const IS_MOCKED_CLIENT = process.env.APP_MOCKED_CLIENT === '1';
@@ -276,7 +275,7 @@ export const CONTENT_TYPES_WITH_PREVIEW = new Set([
   ...SUPPORTED_VIDEO_CONTENT_TYPES,
 ]);
 
-export const CONTENT_NOT_SUPPORTED = 'The message is not supported on this version of BlueFox.';
+export const CONTENT_NOT_SUPPORTED = 'The message is not supported on this version of Tadpole.';
 
 // Taken from https://github.com/telegramdesktop/tdesktop/blob/41d9a9fcbd0c809c60ddbd9350791b1436aff7d9/Telegram/SourceFiles/ui/boxes/choose_language_box.cpp#L28
 export const SUPPORTED_TRANSLATION_LANGUAGES = [
@@ -301,15 +300,15 @@ export const SUPPORTED_TRANSLATION_LANGUAGES = [
 export const RE_LINK_TEMPLATE = '((ftp|https?):\\/\\/)?((www\\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\\.[a-zA-Z][-a-zA-Z0-9]{1,62})\\b([-a-zA-Z0-9()@:%_+.,~#?&/=]*)';
 export const RE_MENTION_TEMPLATE = '(@[\\w\\d_-]+)';
 export const RE_TG_LINK = /^tg2:(\/\/)?/i;
-export const RE_TME_LINK = /^(https?:\/\/)?([-a-zA-Z0-9@:%_+~#=]{1,32}\.)?teamgram\.me/i;
-export const RE_TELEGRAM_LINK = /^(https?:\/\/)?teamgram\.net\//i;
-export const TME_LINK_PREFIX = 'https://teamgram.me/';
+export const RE_TME_LINK = /^(https?:\/\/)?([-a-zA-Z0-9@:%_+~#=]{1,32}\.)?tadpole\.chat/i;
+export const RE_TELEGRAM_LINK = /^(https?:\/\/)?tadpole\.chat\//i;
+export const TME_LINK_PREFIX = 'https://tadpole.chat/';
 export const BOT_FATHER_USERNAME = 'botfather';
 export const USERNAME_PURCHASE_ERROR = 'USERNAME_PURCHASE_AVAILABLE';
 export const MESSAGE_ID_REQUIRED_ERROR = 'MESSAGE_ID_REQUIRED';
 export const PURCHASE_USERNAME = 'auction';
 export const ACCEPTABLE_USERNAME_ERRORS = new Set([USERNAME_PURCHASE_ERROR, 'USERNAME_INVALID']);
-export const TME_WEB_DOMAINS = new Set(['teamgram.me', 'web.teamgram.me', 'a.teamgram.me', 'k.teamgram.me', 'z.teamgram.me']);
+export const TME_WEB_DOMAINS = new Set(['tadpole.chat', 'web.tadpole.chat', 'a.tadpole.chat', 'k.tadpole.chat', 'z.tadpole.chat']);
 export const WEB_APP_PLATFORM = 'weba';
 export const LANG_PACK = 'weba';
 
@@ -339,11 +338,11 @@ export const MAX_MEDIA_FILES_FOR_ALBUM = 10;
 export const MAX_ACTIVE_PINNED_CHATS = 5;
 export const SCHEDULED_WHEN_ONLINE = 0x7FFFFFFE;
 export const LANG_PACKS = ['android', 'ios', 'tdesktop', 'macos', 'web'] as const;
-export const FEEDBACK_URL = 'https://teamgram.net/bugs/?tag_ids=41&sort=time';
-export const FAQ_URL = 'https://teamgram.net/faq';
-export const PRIVACY_URL = 'https://teamgram.net/privacy';
-export const MINI_APP_TOS_URL = 'https://teamgram.net/tos/mini-apps';
-export const FRAGMENT_ADS_URL = 'https://teamgram.net/fragment/ads';
+export const FEEDBACK_URL = 'https://chat.tadpole.chat/bugs/?tag_ids=41&sort=time';
+export const FAQ_URL = 'https://chat.tadpole.chat/faq';
+export const PRIVACY_URL = 'https://chat.tadpole.chat/privacy';
+export const MINI_APP_TOS_URL = 'https://chat.tadpole.chat/tos/mini-apps';
+export const FRAGMENT_ADS_URL = 'https://chat.tadpole.chat/fragment/ads';
 export const GENERAL_TOPIC_ID = 1;
 export const STORY_EXPIRE_PERIOD = 86400; // 1 day
 export const STORY_VIEWERS_EXPIRE_PERIOD = 86400; // 1 day

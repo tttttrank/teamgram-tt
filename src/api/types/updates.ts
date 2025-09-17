@@ -61,7 +61,8 @@ export type ApiUpdateAuthorizationStateType = (
   'authorizationStateReady' |
   'authorizationStateClosing' |
   'authorizationStateClosed' |
-  'authorizationStateWaitQrCode'
+  'authorizationStateWaitQrCode' |
+  'authorizationStateWaitDeviceLogin' // 新增：设备指纹登录等待状态
 );
 
 export type ApiUpdateConnectionStateType = (
@@ -458,6 +459,17 @@ export type ApiUpdateConfig = {
   '@type': 'updateConfig';
 };
 
+// 新增：前端收到后应返回运行时配置（worker -> 前端 请求配置）
+export type ApiRequestAppConfig = {
+  '@type': 'updateRequestAppConfig';
+};
+
+// 新增：worker 将运行时配置下发给前端
+export type ApiUpdateAppConfig = {
+  '@type': 'updateAppConfig';
+  config: Record<string, any>;
+};
+
 export type ApiUpdateResetContacts = {
   '@type': 'updateResetContactList';
 };
@@ -825,6 +837,7 @@ export type ApiUpdate = (
   ApiUpdateUserFullInfo | ApiUpdateVideoProcessingPending |
   ApiUpdateAvatar | ApiUpdateMessageImage | ApiUpdateDraftMessage |
   ApiUpdateError | ApiUpdateResetContacts | ApiUpdateStartEmojiInteraction |
+  ApiUpdateAppConfig | ApiRequestAppConfig |
   ApiUpdateFavoriteStickers | ApiUpdateStickerSet | ApiUpdateStickerSets | ApiUpdateStickerSetsOrder |
   ApiUpdateRecentStickers | ApiUpdateSavedGifs | ApiUpdateNewScheduledMessage | ApiUpdateMoveStickerSetToTop |
   ApiUpdateScheduledMessageSendSucceeded | ApiUpdateScheduledMessage | ApiUpdateStarPaymentStateCompleted |

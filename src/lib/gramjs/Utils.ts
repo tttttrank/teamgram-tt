@@ -210,7 +210,13 @@ export function getDC(dcId: number, downloadDC = false) {
             };
             // return {
             //     id: 1,
-            //     ipAddress: `47.254.238.188`,
+            //     ipAddress: `chat.tadpole.chat`,
+            //     // ipAddress: `127.0.0.1`,
+            //     port: 443,
+            // };
+            // return {
+            //     id: 1,
+            //     ipAddress: `8.213.227.226`,
             //     port: 10443,
             // };
         default:

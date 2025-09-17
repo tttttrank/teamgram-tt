@@ -48,7 +48,8 @@ import {
 } from '../updates/updateManager';
 import {
   onAuthError, onAuthReady, onCurrentUserUpdate, onRequestCode, onRequestPassword, onRequestPhoneNumber,
-  onRequestQrCode, onRequestRegistration, onWebAuthTokenFailed,
+  onRequestQrCode, onRequestRegistration, onRequestDeviceLogin, onWebAuthTokenFailed,
+  onRequestAppConfig,
 } from './auth';
 import downloadMediaWithClient, { parseMediaUrl } from './media';
 
@@ -80,6 +81,38 @@ export async function init(initialArgs: ApiInitialArgs) {
   } = initialArgs;
 
   const session = new sessions.CallbackSession(sessionData, onSessionUpdate);
+
+  // 使用 gramjs 风格的请求方式向前端获取运行时配置（不使用 fetch），参考 onRequestCode 的交互方式
+  async function fetchAndSendAppConfig() {
+    try {
+      let cfg: any = undefined;
+      // 通过 onRequestAppConfig 向前端发起请求，前端需在收到 updateRequestAppConfig 后用桥接调用 provideAppConfig
+      try {
+        cfg = await onRequestAppConfig();
+      } catch (e) {
+        // 前端拒绝或未响应，记录但继续回退到默认
+        // eslint-disable-next-line no-console
+        console.warn('onRequestAppConfig failed or timed out', e);
+      }
+
+      if (!cfg) {
+        // fallback 默认值（保持与之前逻辑一致）
+        cfg = {
+          allowPhoneRegistration: true,
+          autoLoginWithFingerprint: true,
+        };
+      }
+
+      // 把配置通过 API update 发给前端（保持原有行为，使前端也能通过 updateAppConfig 读取）
+      sendApiUpdate({
+        '@type': 'updateAppConfig',
+        config: cfg,
+      });
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.warn('fetchAndSendAppConfig failed', err);
+    }
+  }
 
   // eslint-disable-next-line no-restricted-globals
   (self as any).isWebmSupported = isWebmSupported;
@@ -120,6 +153,9 @@ export async function init(initialArgs: ApiInitialArgs) {
     }
 
     try {
+      // 在启动 client 之前通过 gramjs 风格的请求从前端获取运行时配置（onRequestAppConfig / provideAppConfig 交互）
+      // await fetchAndSendAppConfig();
+
       client.setPingCallback(getDifference);
       await client.start({
         phoneNumber: onRequestPhoneNumber,
@@ -127,6 +163,7 @@ export async function init(initialArgs: ApiInitialArgs) {
         password: onRequestPassword,
         firstAndLastNames: onRequestRegistration,
         qrCode: onRequestQrCode,
+        // deviceLogin: onRequestDeviceLogin,
         onError: onAuthError,
         initialMethod: platform === 'iOS' || platform === 'Android' ? 'phoneNumber' : 'qrCode',
         shouldThrowIfUnauthorized: Boolean(sessionData),

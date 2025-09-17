@@ -130,7 +130,7 @@ type PublicMessageLinkBuilderParams = Omit<BuilderParams<PublicMessageLink>, 'is
   single?: string;
 };
 
-const ELIGIBLE_HOSTNAMES = new Set(['teamgram.me']);
+const ELIGIBLE_HOSTNAMES = new Set(['tadpole.chat']);
 
 export function isDeepLink(link: string): boolean {
   return Boolean(link.match(RE_TME_LINK) || link.match(RE_TG_LINK));
