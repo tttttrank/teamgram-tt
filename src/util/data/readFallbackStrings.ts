@@ -6,7 +6,7 @@ import readStrings from './readStrings';
 
 const FALLBACK_LANG_CODE = 'zh';
 const FALLBACK_VERSION = 0;
-const FALLBACK_TRANSLATE_URL = 'https://translations.telegram.org/zh-hans/';
+const FALLBACK_TRANSLATE_URL = 'https://translations.tadpole.net/zh-hans/';
 
 export default async function readFallbackStrings(forLocalScript?: boolean): Promise<CachedLangData> {
   let fileData;
